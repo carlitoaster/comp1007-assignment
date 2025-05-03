@@ -32,6 +32,19 @@ BEGIN
             successRate
             mannedMission
         
+        CONSTRUCTOR with PARAMETERS
+        IMPORTS: pMissionName(String), pMissionCode(String),pDestinationPlanet(String),pLaunchYear(Int),pSuccessRate(Double),pMannedMission(Boolean) 
+        EXPORTS: none
+        ASSERTION: creates mission object with parameters
+        ALGORITHM:
+                    missionName = pMissionName
+                    missionCode = pMissionCode
+                    destinationPlanet = pDestinationPlanet
+                    launchYear = pLaunchYear
+                    successRate = pSuccessRate
+                    mannedMission = pMannedMission
+
+
         MUTATORS(setters)
 
         MUTATOR:setMissionName()
@@ -71,13 +84,6 @@ BEGIN
         ALGORITHM: mannedMission = pMannedMission
 
         ACCESSORS(getters)
-    + getMissionName(): String
-    + getMissionCode(): String
-    + getDestinationPlanet(): String  
-    + getLaunchYear(): Int
-    + getSuccessRate(): Double
-    + getMannedMission(): Boolean
-
         ACCESSOR: getMissionName()
         IMPORT: none
         EXPORT: String
@@ -112,7 +118,45 @@ BEGIN
         IMPORT: none 
         EXPORT: 
         ASSERTION:
-        ALGORITHM: manned 
-           
+        ALGORITHM: return mannedMission
+        
+        METHOD: equals()
+        IMPORT: inmission(object)
+        EXPORT: isEqual(boolean)
+        ASSERTION: checks if object is equal to another object
+        ALGORIHTM: 
+                    isEqual EQUALS false
+                    inMission(object) EQUALS null
+                    IF inObject INSTANCE OF mission THEN
+                        inMission EQUALS (mission) inObject
+                        IF missionName EQUALS(inMission.missionName) THEN
+                            IF missionCode EQUALS (inMission.missionCode) THEN
+                                IF destinationPlanet EQUALS (inMission.destinationPlanet) THEN
+                                    IF launchYear EQUALS (inMission.launchYear) THEN
+                                        IF successRate EQUALS (inMission.successRate) THEN
+                                            IF mannedMission EQUALS (inMission.mannedMission) THEN
+                                            inEqual = true
+                    END IF 
+                    return isEqual
+
+        METHOD: toString()
+        IMPORT: none
+        EXPORT: missionString
+        ASSERTION: gives string of mission
+        ALGORITHM: 
+                    "Mission name is " + missionName
+                    "Mission code is " + missionCode
+                    "Destination planet is " + destinationPlanet
+                    "launch year is " + launchYear
+                    "Success rate is " + successRate
+                    "Manned mission status" + mannedMission
+
+    public String toString()
+    {
+        String personString;
+        personString = "First name is " + firstName + "\nFamily name is " + familyName + "\nDate of birth is " + dayOfBirth + "/" + birthMonth + "/" + birthYear;
+        return personString;
+    }
+
 
 
