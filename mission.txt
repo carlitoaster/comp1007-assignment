@@ -1,0 +1,118 @@
+Person UML
+- missionName
+- missionCode
+- destinationPlanet
+- launchYear
+- successRate
+- mannedMission
+
++ setMissionName(): void
++ setMissionCode(): void
++ setDestinationPlanet(): void
++ setLaunchYear(): void
++ setSuccessRate(): void
++ setMannedMission(): void
+
++ getMissionName(): String
++ getMissionCode(): String
++ getDestinationPlanet(): String  
++ getLaunchYear(): Int
++ getSuccessRate(): Double
++ getMannedMission(): Boolean
+
+PSEUDOCODE
+
+BEGIN
+    CLASS missionCode
+        CLASS FIELDS:
+            missionName
+            missionCode
+            destinationPlanet
+            launchYear
+            successRate
+            mannedMission
+        
+        MUTATORS(setters)
+
+        MUTATOR:setMissionName()
+        IMPORT: pMissionName
+        EXPORT: none
+        ASSERTION: sets mission name
+        ALGORITHM: missionName = pMissionName
+
+        MUTATOR: setMissionCode()
+        IMPORT: pMissionCode
+        EXPORT: none
+        ASSERTION:
+        ALGORITHM: missionCode = pMissionCode
+
+        MUTATOR:setDestinationPlanet()
+        IMPORT: pDestinationPlanet
+        EXPORT: none
+        ASSERTION:
+        ALGORITHM: destinationPlanet = pDestinationPlanet
+
+        MUTATOR:setLaunchYear()
+        IMPORT: pLaunchYear
+        EXPORT: none
+        ASSERTION:
+        ALGORITHM: launchYear = pLaunchYear
+
+        MUTATOR:setSuccessRate() 
+        IMPORT: pSuccessRate
+        EXPORT: none
+        ASSERTION:
+        ALGORITHM: successRate = pSuccessRate
+
+        MUTATOR:setMannedMission()
+        IMPORT: pMannedMission
+        EXPORT: none
+        ASSERTION:
+        ALGORITHM: mannedMission = pMannedMission
+
+        ACCESSORS(getters)
+    + getMissionName(): String
+    + getMissionCode(): String
+    + getDestinationPlanet(): String  
+    + getLaunchYear(): Int
+    + getSuccessRate(): Double
+    + getMannedMission(): Boolean
+
+        ACCESSOR: getMissionName()
+        IMPORT: none
+        EXPORT: String
+        ASSERTION: 
+        ALGORITHM: return missionName
+        
+        ACCESSOR: getMissionCode()
+        IMPORT: none
+        EXPORT: String
+        ASSERTION:
+        ALGORITHM: return missionCode
+           
+        ACCESSOR: getDestinationPlanet()
+        IMPORT: none 
+        EXPORT: String
+        ASSERTION:
+        ALGORITHM: return destinationPlanet
+
+        ACCESSOR: getLaunchYear()
+        IMPORT: none
+        EXPORT: Int
+        ASSERTION:
+        ALGORITHM: return launchYear
+           
+        ACCESSOR: getSuccessRate()
+        IMPORT: none
+        EXPORT: Double
+        ASSERTION:
+        ALGORITHM: return successRate
+           
+        ACCESSOR: getMannedMission()
+        IMPORT: none 
+        EXPORT: 
+        ASSERTION:
+        ALGORITHM: manned 
+           
+
+
