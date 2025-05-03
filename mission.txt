@@ -151,12 +151,7 @@ BEGIN
                     "Success rate is " + successRate
                     "Manned mission status" + mannedMission
 
-    public String toString()
-    {
-        String personString;
-        personString = "First name is " + firstName + "\nFamily name is " + familyName + "\nDate of birth is " + dayOfBirth + "/" + birthMonth + "/" + birthYear;
-        return personString;
-    }
+
 
 
 
