@@ -121,14 +121,13 @@ BEGIN
         ALGORITHM: return mannedMission
         
         METHOD: equals()
-        IMPORT: inmission(object)
+        IMPORT: inObject(object)
         EXPORT: isEqual(boolean)
         ASSERTION: checks if object is equal to another object
         ALGORIHTM: 
-                    isEqual EQUALS false
-                    inMission(object) EQUALS null
-                    IF inObject INSTANCE OF mission THEN
-                        inMission EQUALS (mission) inObject
+                    isEqual = false
+                    IF inObject IS A Mission THEN
+                        TRANSFORM inObject TO Mission named inMission
                         IF missionName EQUALS(inMission.missionName) THEN
                             IF missionCode EQUALS (inMission.missionCode) THEN
                                 IF destinationPlanet EQUALS (inMission.destinationPlanet) THEN

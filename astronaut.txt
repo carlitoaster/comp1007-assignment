@@ -1,3 +1,86 @@
 astronaut UML
-CLASS FIELDS
+PSUEDOCODE
+    CLASS FIELDS
+        name
+        role
+        age
+        nationality
+    Accessors(getters)
+        MUTATOR: getName()
+        IMPORTS: none
+        EXPORTS: name
+        ASSERTION: gets astronaut's name
+        ALGORIHTM: return name
+
+        MUTATOR: getRole()
+        IMPORTS: none
+        EXPORTS: role
+        ASSERTION: gets astronaut's role
+        ALGORIHTM: return role
+
+        MUTATOR: getAge()
+        IMPORTS: none
+        EXPORTS: age
+        ASSERTION: get astronaut's age
+        ALGORIHTM: return age
+
+        MUTATOR: getNationality()
+        IMPORTS: none
+        EXPORTS: nationality
+        ASSERTION: get astronaut's nationality
+        ALGORIHTM: return nationality
+    Mutators(setters)
+
+        ACCESSOR: setName()
+        IMPORTS: pName
+        EXPORTS: none
+        ASSERTION: sets astronaut's name
+        ALGORIHTM: name = pName
+
+        ACCESSOR: setRole()
+        IMPORTS: pRole
+        EXPORTS: none
+        ASSERTION: sets astronaut's role
+        ALGORIHTM: role = pRole
+
+        ACCESSOR: setAge()
+        IMPORTS: pAge
+        EXPORTS: none
+        ASSERTION: sets astronaut's age
+        ALGORIHTM: age = pAge
+
+        ACCESSOR: setNationality()
+        IMPORTS: pNationality
+        EXPORTS: none
+        ASSERTION: sets astronaut's nationality 
+        ALGORIHTM: nationality = pNationality 
+    
+    Methods
+        METHOD: equals()
+        IMPORTS: inObject(Object)
+        EXPORTS: isEqual(Boolean)
+        ASSERTION: compares if astronaut object is equivalent to another astronaut object
+        ALGORITHM:
+                isEqual = false
+                if inObject is a Astronaut
+                    TRANSFORM inObject TO Astronaut named inAstronaut
+                    IF name EQUALS inAstronaut.getName() THEN
+                        IF role EQUALS inAstronaut.getRole() THEN
+                            IF age EQUALS inAstronaut.getAge() THEN
+                                IF nationality EQUALS inAstronaut.getNationality() THEN
+                                    isEqual = TRUE
+                return isEqual
+                
+
+        METHOD: toString
+        IMPORTS: none
+        EXPORTS: astronautString (String)
+        ASSERTION: returns human representable string of astronaut
+        ALGORITHM: 
+                    astronautString =  "name is " + name + 
+                    "age is " + age + 
+                    "role is " + role + 
+                    "nationality is " + nationality
+                    return astronautString
+
     
