@@ -6,35 +6,35 @@ public class Astronaut
     private String nationality;
 
     //Mutators(setters)
-    public void setName(String pName)
+    public void setName(String name)
     {
-        name = pName;
+        this.name = name;
     }
-    public void setRole(String pRole)
+    public void setRole(String role)
     {
-        role = pRole;
+        this.role = role;
     }
-    public void setAge(int pAge)
+    public void setAge(int age)
     {
-        age = pAge;
+        this.age = age;
     }
 
     //Accessors(getters)
     public String getName()
     {
-        return name;
+        return this.name;
     }
     public String getRole()
     {
-        return role;
+        return this.role;
     }
     public int getAge()
     {
-        return age;
+        return this.age;
     }
     public String getNationality()
     {
-        return nationality;
+        return this.nationality;
     }
 
     //methods

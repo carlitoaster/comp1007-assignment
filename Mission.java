@@ -8,66 +8,66 @@ public class Mission{
     private Boolean mannedMission;
 
     //with Parameter constructor
-    public Mission(String pMissionName, String pMissionCode, String pDestinationPlanet, int pLaunchYear, double pSuccessRate, boolean pMannedMission)
+    public Mission(String MissionName, String MissionCode, String DestinationPlanet, int LaunchYear, double SuccessRate, boolean MannedMission)
     {
-        this.missionName = pMissionName;
-        this.missionCode = pMissionCode;
-        this.destinationPlanet = pDestinationPlanet;
-        this.launchYear = pLaunchYear;
-        this.successRate = pSuccessRate;
-        this.mannedMission = pMannedMission;
+        this.missionName = MissionName;
+        this.missionCode = MissionCode;
+        this.destinationPlanet = DestinationPlanet;
+        this.launchYear = LaunchYear;
+        this.successRate = SuccessRate;
+        this.mannedMission = MannedMission;
 
     }
     //accessors(getters)
     public String getMissionName()
     {
-        return missionName;
+        return this.missionName;
     }
     public String getMissionCode()
     {
-        return missionCode;
+        return this.missionCode;
     }
     public String getDestinationPlanet()
     {
-        return destinationPlanet;
+        return this.destinationPlanet;
     }
     public int getLaunchYear()
     {
-        return launchYear;
+        return this.launchYear;
     }
     public double getSuccessRate()
     {
-        return successRate;
+        return this.successRate;
     }
     public Boolean getMannedMission()
     {
-        return mannedMission;
+        return this.mannedMission;
     }
 
     //setters(Mutators)
-    public void setMissionName(String pMissionName)
+    public void setMissionName(String missionName)
     {
-        missionName = pMissionName;
+        this.missionName = missionName;
     }
-    public void setMissionCode(String pMissionCode)
+    public void setMissionCode(String missionCode)
     {
-        missionCode = pMissionCode;
+        this.missionCode = missionCode;
     }
-    public void setDestinationPlanet(String pDestinationPlanet)
+    public void setDestinationPlanet(String destinationPlanet)
     {
-        destinationPlanet = pDestinationPlanet;
+        this.destinationPlanet = destinationPlanet;
     }
-    public void setLaunchYear(int pLaunchYear)
+    public void setLaunchYear(int launchYear)
     {
-        launchYear = pLaunchYear;
+        this.launchYear = launchYear;
     }
-    public void setSuccessRate(double pSuccessRate)
+    public void setSuccessRate(double successRate)
     {
-        successRate = pSuccessRate;
+        this.successRate = successRate;
     }
-    public void setMannedMission(boolean pMannedMission)
+    public void setMannedMission(boolean mannedMission)
     {
-        mannedMission = pMannedMission;
+        this.mannedMission = mannedMission;
     }
 
     //methods 
