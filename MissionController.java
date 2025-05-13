@@ -24,7 +24,7 @@ public class MissionController
             {
                 String[] parts = line.split(",");
                 int lineLength = parts.length;
-                if (lineLength >=6)
+                if (lineLength ==9)
                 {
                     try
                     {
@@ -71,6 +71,26 @@ public class MissionController
         for (int i =0;i<missionCount;i++)
         {
             System.out.println(missions[i].missionToString());
+        }
+    }
+    public void viewMannedMissions()
+    {
+        for (int i = 0;i<missionCount;i++)
+        {
+            if (missions[i].getMannedMission()==true)
+            {
+                System.out.println(missions[i]);
+            }
+        }
+    }
+    public void viewUnmannedMissions()
+    {
+        for (int i = 0;i<missionCount;i++)
+        {
+            if (missions[i].getMannedMission()==false)
+            {
+                System.out.println(missions[i]);
+            }
         }
     }
 }
