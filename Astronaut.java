@@ -5,6 +5,15 @@ public class Astronaut
     private int age;
     private String nationality;
 
+
+    //constructor
+    public Astronaut(String name,String role,int age,String nationality)
+    {
+        this.name = name;
+        this.role = role;
+        this.age = age;
+        this.nationality = nationality;
+    }
     //Mutators(setters)
     public void setName(String name)
     {
@@ -67,12 +76,12 @@ public class Astronaut
         return isEqual;
     }
     
-    public String toString()
+    public String astronautToString()
     {
-        String astronautString = "name is " + name + 
-        "\n role is " + role + 
-        "\n age is " + age +
-        "\n nationality is " + nationality;
+        String astronautString = "name:" + name + 
+        "\n role:" + role + 
+        "\n age:" + age +
+        "\n nationality:" + nationality;
         return astronautString;
     }
 }

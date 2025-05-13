@@ -104,15 +104,15 @@ public class Mission{
         }
         return isEqual;
     }
-    public String toString()
+    public String missionToString()
     {
         String missionString;
-        missionString = "Mission name is " + missionName
-        + "\n Mission code is " + missionCode
-        + "\n Destination planet is " + destinationPlanet
-        + "\n launch year is " + launchYear
-        + "\n Success rate is " + successRate
-        + "\n Manned mission status" + mannedMission;
+        missionString = "Mission name:" + missionName
+        + "\n Mission code:" + missionCode
+        + "\n Destination planet:" + destinationPlanet
+        + "\n launch year:" + launchYear
+        + "\n Success rate:" + successRate
+        + "\n Manned mission status: " + mannedMission;
         return missionString;
     }
      
