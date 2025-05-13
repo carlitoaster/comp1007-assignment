@@ -47,23 +47,38 @@ public class Mission{
     //setters(Mutators)
     public void setMissionName(String missionName)
     {
-        this.missionName = missionName;
+        if (!missionName.isEmpty())
+        {
+            this.missionName = missionName;
+        }
     }
     public void setMissionCode(String missionCode)
     {
-        this.missionCode = missionCode;
+        if (!missionCode.isEmpty())
+        {
+            this.missionCode = missionCode;
+        }
     }
     public void setDestinationPlanet(String destinationPlanet)
     {
-        this.destinationPlanet = destinationPlanet;
+        if (!destinationPlanet.isEmpty())
+        {
+            this.destinationPlanet = destinationPlanet;
+        }   
     }
     public void setLaunchYear(int launchYear)
     {
-        this.launchYear = launchYear;
+        if (launchYear>=1900 && launchYear<=2100)
+        {
+            this.launchYear = launchYear;
+        }
     }
     public void setSuccessRate(double successRate)
     {
-        this.successRate = successRate;
+        if ((successRate)>=0 && launchYear<=100)
+        {
+            this.successRate = successRate;
+        }
     }
     public void setMannedMission(boolean mannedMission)
     {

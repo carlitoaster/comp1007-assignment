@@ -8,7 +8,10 @@ public class Astronaut
     //Mutators(setters)
     public void setName(String name)
     {
-        this.name = name;
+        if (!name.isEmpty())
+        {     
+            this.name = name;
+        }
     }
     public void setRole(String role)
     {
@@ -16,7 +19,17 @@ public class Astronaut
     }
     public void setAge(int age)
     {
-        this.age = age;
+        if (age>0)  
+        {
+            this.age = age; 
+        }
+    }
+    public void setNationality(String nationality)
+    {
+        if (!nationality.isEmpty())
+        {
+            this.nationality = nationality;
+        }   
     }
 
     //Accessors(getters)
