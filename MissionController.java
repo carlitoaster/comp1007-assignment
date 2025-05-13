@@ -93,4 +93,45 @@ public class MissionController
             }
         }
     }
+    public void viewMissionAstronauts()
+    {
+        System.out.println("Enter mission code of mission");
+        String missionCode = sc.nextLine();
+        boolean found = false;
+        int count = 0;
+        while (!found)
+        {
+            if (missionCode == missions[count].getMissionCode())
+            {
+                found = true;
+                System.out.println(astronauts[count].astronautToString());
+            }
+        }
+        
+    }
+    public void viewMissionSuccessRateSummary()
+    {
+        double sum = 0;
+        double min = missions[0].getSuccessRate();
+        double max = missions[0].getSuccessRate();
+        double curr;
+        for (int i =0;i<missionCount;i++)
+        {
+            curr = missions[i].getSuccessRate();
+            sum += curr;
+            if (curr<min)
+            {
+                min = curr;
+            }
+            if (curr> max)
+            {
+                max = curr;
+            }
+        }
+        double average = sum/missionCount;
+        System.out.println("highest success rate is: " + max);
+        System.out.println("lowest success rate is: " + min);
+        System.out.println("average success rate is: " + average);
+        
+    }
 }
