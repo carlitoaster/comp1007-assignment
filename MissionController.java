@@ -8,7 +8,7 @@ public class MissionController
     private String fileName;
     private Astronaut[] astronauts;
     private Scanner sc = new Scanner(System.in);
-    
+
     public void loadDataFromCSV()
     {
         System.out.println("which file to load data from?");
@@ -38,6 +38,7 @@ public class MissionController
                         missions[missionCount] = new Mission(missionName,missionCode,destinationPlanet,launchYear,successRate,mannedMission);
                         missionCount++;
                         //Astronaut fields
+                        
                         String name = parts[6];
                         String role = parts[7];
                         int age =  Integer.parseInt(parts[8]);
@@ -79,7 +80,7 @@ public class MissionController
         {
             if (missions[i].getMannedMission()==true)
             {
-                System.out.println(missions[i]);
+                System.out.println(missions[i].missionToString());
             }
         }
     }
@@ -89,7 +90,7 @@ public class MissionController
         {
             if (missions[i].getMannedMission()==false)
             {
-                System.out.println(missions[i]);
+                System.out.println(missions[i].missionToString());
             }
         }
     }

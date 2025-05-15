@@ -143,12 +143,12 @@ BEGIN
         EXPORT: missionString
         ASSERTION: gives string of mission
         ALGORITHM: 
-                    "Mission name is " + missionName
-                    "Mission code is " + missionCode
-                    "Destination planet is " + destinationPlanet
-                    "launch year is " + launchYear
-                    "Success rate is " + successRate
-                    "Manned mission status" + mannedMission
+                    "Mission name is: " + missionName
+                    "Mission code is: " + missionCode
+                    "Destination planet is: " + destinationPlanet
+                    "launch year is: " + launchYear
+                    "Success rate is: " + successRate
+                    "Manned mission status: " + mannedMission
 
 
 
