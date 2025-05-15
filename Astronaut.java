@@ -4,15 +4,17 @@ public class Astronaut
     private String role;
     private int age;
     private String nationality;
+    private String missionCode;
 
 
     //constructor
-    public Astronaut(String name,String role,int age,String nationality)
+    public Astronaut(String name,String role,int age,String nationality,String missionName, String missionCode)
     {
         this.name = name;
         this.role = role;
         this.age = age;
         this.nationality = nationality;
+        this.missionCode = missionCode; 
     }
     //Mutators(setters)
     public void setName(String name)
@@ -40,6 +42,10 @@ public class Astronaut
             this.nationality = nationality;
         }   
     }
+    public void missionCode(String missionCode)
+    {
+        this.missionCode = missionCode;
+    }
 
     //Accessors(getters)
     public String getName()
@@ -57,6 +63,10 @@ public class Astronaut
     public String getNationality()
     {
         return this.nationality;
+    }
+    public String getMissionCode()
+    {
+        return this.missionCode;
     }
 
     //methods
