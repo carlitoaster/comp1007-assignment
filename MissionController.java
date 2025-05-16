@@ -7,17 +7,16 @@ public class MissionController
     private int missionCount = 0;
     private int astronautCount = 0;
     private String fileName;
-    private Scanner sc = new Scanner(System.in);
+    private Scanner sc; 
 
-    public MissionController() 
+    public MissionController(Scanner sc) 
     {
-        loadDataFromCSV();
+        loadDataFromCSV(fileName);
+        this.sc = sc;
     }
-    
-    public void loadDataFromCSV()
+
+    public void loadDataFromCSV(String fileName)
     {
-        System.out.println("which file to load data from?");
-        fileName = sc.nextLine();
         boolean isHeader = true;
         try
         {
@@ -118,7 +117,7 @@ public class MissionController
         {
             if (astronautArray[i].getMissionCode().equals(missionCode))
             {
-                System.out.println(astronautArray[i].astronautToString());
+                System.out.println("astronaut " + (i+1) + " : " + astronautArray[i].astronautToString());
             }
         }
         
@@ -236,19 +235,19 @@ public class MissionController
         }
 
         // Get and validate manned status
-        boolean isManned;
+        boolean mannedMission;
         while (true) 
         {
             System.out.print("Is this a manned mission? (y/n): ");
             String input = sc.nextLine().trim().toLowerCase();
             if (input.equals("y")) 
             {
-                isManned = true;
+                mannedMission = true;
                 break;
             } 
             else if (input.equals("n")) 
             {
-                isManned = false;
+                mannedMission = false;
                 break;
             }
             else
@@ -256,7 +255,8 @@ public class MissionController
                 System.out.println("Please enter 'y' or 'n'.");
             }
         }
-        missionArray[missionCount++] = new Mission(name, code, destination, launchYear, successRate, isManned);
+        missionCount++;
+        missionArray[missionCount] = new Mission(name, code, destination, launchYear, successRate, mannedMission);
         System.out.println("Mission added successfully!");
     }
     public void editExistingMission()
@@ -363,11 +363,16 @@ public class MissionController
                     {
                         validStatus = true;
                     } 
-                    else if (statusInput.equals("y") || statusInput.equals("n")) 
+                    else if (statusInput.equals("y")) 
                     {
-                        missionToEdit.setMannedMission(statusInput.equals("y"));
+                        missionToEdit.setMannedMission(true);
                         validStatus = true;
                     } 
+                    else if (statusInput.equals("n"))
+                    {
+                        missionToEdit.setMannedMission(false);
+                        validStatus = true;
+                    }
                     else 
                     {
                         System.out.println("Please enter 'y', 'n', or press Enter to skip.");
@@ -376,8 +381,7 @@ public class MissionController
                 
                 System.out.println("\nMission updated successfully!");
                 System.out.println("Updated details:");
-                System.out.println(missionToEdit);
-                return;
+                System.out.println(missionToEdit.missionToString());
             }
         }
     }
