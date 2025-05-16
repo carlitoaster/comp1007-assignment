@@ -5,21 +5,13 @@
 ---
 ## Completed Requirements
 This is a checklist of the completed requirements as outlined in the Assignment specification.
-- [x] View all Books
-- [x] View all eBooks
-- [x] View all non-eBooks
-- [x] View an author's books
-- [x] Searching books by title
-- [x] Add book
-- [x] Edit book
-- [x] Realtime CSV reading and writing
-- [x] Interactive menu
+
 
 - [x] View all missions.
 - [x] View all manned missions.
 - [x] View all unmanned missions.
 - [x] View a mission's astronauts.
-- [] Add a new mission.
-- [] Edit an existing mission.
+- [x] Add a new mission.
+- [x] Edit an existing mission.
 - [x] Provide a summary of missions' success rates (average, highest, lowest).
-- [] List astronauts for a given nationality
+- [x] List astronauts for a given nationality

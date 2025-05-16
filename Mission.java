@@ -16,8 +16,8 @@ public class Mission{
         this.launchYear = LaunchYear;
         this.successRate = SuccessRate;
         this.mannedMission = MannedMission;
-
     }
+    
     //accessors(getters)
     public String getMissionName()
     {

@@ -8,7 +8,7 @@ public class Astronaut
 
 
     //constructor
-    public Astronaut(String name,String role,int age,String nationality,String missionName, String missionCode)
+    public Astronaut(String name,String role,int age,String nationality, String missionCode)
     {
         this.name = name;
         this.role = role;
